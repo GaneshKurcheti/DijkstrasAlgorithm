@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using TableParser;
 
 namespace DijkstraAlgoritm
@@ -55,7 +55,7 @@ namespace DijkstraAlgoritm
 				startNodeIndex = Convert.ToInt32(Console.ReadLine());
 			}
        
-            var resultSet=new Algo().DijkstraAlgo(distanceGraph, totalNodes, startNodeIndex-1);
+            List<Node> resultSet=new Algorithm().DijkstraAlgo(distanceGraph, totalNodes, startNodeIndex-1);
 			Console.WriteLine(resultSet.ToStringTable(new[] { "Node", " Parent", "Total Distance","Path" },a => a.Index+1, a => a.Parent+1, a => a.TotalDistance, a=>a.PathToString??"No Way"));
 			Console.ReadLine();
         }

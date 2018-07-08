@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace DijkstraAlgoritm
 {
+	/// <summary>
+	/// Holds all the details of a node in the graph.
+	/// </summary>
 	class Node
     {
         public Node(int index, bool isStartNode = false)

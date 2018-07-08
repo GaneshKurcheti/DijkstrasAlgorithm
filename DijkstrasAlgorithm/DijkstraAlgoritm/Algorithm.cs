@@ -3,9 +3,16 @@ using System.Linq;
 
 namespace DijkstraAlgoritm
 {
-	class Algo
+	class Algorithm
     {
-        private List<Node> DistanceFinder(List<Node> nodes, int[,] graph,int startIndex)
+		/// <summary>
+		/// Calculates the minimum possible distance from root node to all other nodes.
+		/// </summary>
+		/// <param name="nodes"></param>
+		/// <param name="graph"></param>
+		/// <param name="startIndex"></param>
+		/// <returns></returns>
+		private List<Node> DistanceFinder(List<Node> nodes, int[,] graph,int startIndex)
         {
 			foreach (var element in nodes)
             {
@@ -36,7 +43,14 @@ namespace DijkstraAlgoritm
             }          
             return nodes;          
         }
-        public List<Node> DijkstraAlgo(int[,] graph,int vertices,int startIndex)
+		/// <summary>
+		/// Creates the nodes and the initiates the shortest path calculation process.
+		/// </summary>
+		/// <param name="graph"></param>
+		/// <param name="vertices"></param>
+		/// <param name="startIndex"></param>
+		/// <returns></returns>
+		public List<Node> DijkstraAlgo(int[,] graph,int vertices,int startIndex)
         {
             List<Node> nodes = new List<Node>();
 			for (int i = 0; i < vertices; i++)
